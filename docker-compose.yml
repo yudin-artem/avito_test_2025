@@ -27,7 +27,7 @@ services:
       DB_PASSWORD: ${DB_PASSWORD}
       SSL_MODE: ${SSL_MODE}
     ports:
-      - "8080:8080"
+      - "${SERVER_PORT}:${SERVER_PORT}"
     depends_on:
       postgres:
         condition: service_healthy
